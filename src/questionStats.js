@@ -71,7 +71,8 @@ async function getQuestionDetails(questionUrls) {
 
 /**
  * 
- * @param {Page} page 
+ * @param {import('puppeteer').Page} page 
+ * @returns {Promise.<Object[]>} Stats of students that have submitted the question
  */
 function getQuestionStatsPromise(page) {
     return new Promise (async (resolve, reject) => {

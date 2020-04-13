@@ -6,7 +6,7 @@ const inquirer = require('inquirer');
 const path = require('path');
 const fuzzy = require('fuzzy');
 
-const loadStudents = require('./loadStudentList');
+const loadStudents = require('./loadEnrolled');
 const { getStatsFromPage } = require('./getStatsFromPage')
 
 const pipeline = util.promisify(stream.pipeline);

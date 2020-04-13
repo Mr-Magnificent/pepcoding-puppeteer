@@ -1,6 +1,8 @@
 /**
- * This function
- * @param {Page} page The browser page object on which we can get the details of particular question
+ * A generic function that gets all the student stats from the {WebElement} Page passed as reference
+ * @param {import('puppeteer').Page} page The browser page object on which we can get the details of
+ *  particular question
+ * @returns {Object[]} Array of student details
  */
 async function getStatsFromPage(page) {
 
@@ -43,7 +45,7 @@ async function getStatsFromPage(page) {
  * Gets the student details of students that are present on current page 
  * of pagination of the stats page. The DOM nodes need to be passed to
  * get the details of the student
- * @param {Object[]} studentsDOMNodes Student DOM nodes on current page
+ * @param {import('puppeteer').ElementHandle[]} studentsDOMNodes Student DOM nodes on current page
  * @returns {Object[]} student objects containing the details of student
  */
 async function getStudentsInEachPage(studentsDOMNodes, page) {
