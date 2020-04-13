@@ -26,6 +26,8 @@ async function getQuestionDetails(questionUrls) {
         consoleStatus.indent = 4;
 
         const browser = await puppeteer.launch({
+            headless: false,
+            slowMo: 10,
             defaultViewport: null
         });
 
@@ -50,6 +52,10 @@ async function getQuestionDetails(questionUrls) {
 
         for (let questionUrl of questionUrls) {
             const page = await browser.newPage();
+            page.goto(questionUrl, {
+                waitUntil: 'load'
+            });
+
             pages.push(getQuestionStatsPromise(page));
         }
 
@@ -63,11 +69,6 @@ async function getQuestionDetails(questionUrls) {
     }
 }
 
-getQuestionDetails([
-    "https://www.pepcoding.com/resources/online-java-foundation/patterns/pattern-type-3-official/ojquestion",
-    "https://www.pepcoding.com/resources/online-java-foundation/arrays-2-d-arrays/spiral-display-official/ojquestion"
-]);
-
 /**
  * 
  * @param {Page} page 
@@ -76,9 +77,12 @@ function getQuestionStatsPromise(page) {
     return new Promise (async (resolve, reject) => {
         try {
             const students = await getStatsFromPage(page);
+            await page.close();
             resolve(students);
         } catch (err) {
             reject(err);
         }
     });
 }
+
+module.exports = getQuestionDetails;

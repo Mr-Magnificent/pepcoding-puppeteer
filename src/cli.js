@@ -7,6 +7,7 @@ const path = require('path');
 const fuzzy = require('fuzzy');
 
 const loadStudents = require('./loadStudentList');
+const { getStatsFromPage } = require('./getStatsFromPage')
 
 const pipeline = util.promisify(stream.pipeline);
 
@@ -52,7 +53,7 @@ async function promptForMissingOptions(options) {
         let fileContent = JSON.parse(await fs.promises.readFile(path.resolve(options.filePath)));
         await updatePepConfig(fileContent, options.filePath);
         fileContent = JSON.parse(await fs.promises.readFile(path.resolve(options.filePath)));
-        await getQuestionsStatus(fileContent);
+        await getStatsFromPage(fileContent.questions);
 
     } catch (err) {
         if (err.code === 'ENOENT') {

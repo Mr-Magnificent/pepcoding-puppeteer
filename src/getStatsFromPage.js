@@ -12,7 +12,7 @@ async function getStatsFromPage(page) {
     await page.select('select#showStatsPerpage', '100');
 
     await page.waitForResponse((res) => {
-        return /https:\/\/www.pepcoding.com\/stats\/courseId/.test(res.url());
+        return /https:\/\/www.pepcoding.com\/stats/.test(res.url());
     }, {
         timeout: 10000
     });
