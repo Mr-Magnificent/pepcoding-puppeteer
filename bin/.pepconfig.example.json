@@ -1,0 +1,17 @@
+{
+    "email": "ayush.zombiestar@gmail.com",
+    "courseUrls": [
+        "https://www.pepcoding.com/resources/online-java-foundation"
+    ],
+    "questionsUrl": [
+        "https://www.pepcoding.com/resources/online-java-foundation/patterns/pattern-type-3-official/ojquestion",
+        "https://www.pepcoding.com/resources/online-java-foundation/arrays-2-d-arrays/spiral-display-official/ojquestion"
+    ],
+    "studentsEnrolled": [
+        "ayush",
+        "<add more usernames in the similar format>"
+    ],
+    "studentToCheck": [
+        
+    ]
+}
