@@ -12,7 +12,7 @@ require('dotenv').config({
 /**
  * Fetches the enrolled students within the course passed as the url
  * @param {String} url The URL of the course from where to fetch the student details
- * @returns {Object[]}  Student list for that particular course
+ * @returns {import('./getStatsFromPage').Student[]}  Student list for that particular course
  */
 async function fetchStudentList(url) {
     try {

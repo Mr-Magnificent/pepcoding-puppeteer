@@ -202,8 +202,8 @@ async function createNewFile(filePath) {
 /**
  * This function receives the students that are returned by loadStudents function 
  * and prompts the user to choose the students for which to show the stats for
- * @param {Object[]} studentsEnrolled Array of students enrolled within a course
- * @returns {Object[]} Array of students to show stats for
+ * @param {import('./getStatsFromPage').Student[]} studentsEnrolled Array of students enrolled within a course
+ * @returns {import('./getStatsFromPage').Student[]} Array of students to show stats for
  */
 async function fetchSelectedStudents(studentsEnrolled) {
     const studentMappedObj = studentsEnrolled.map((student) => {

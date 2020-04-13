@@ -1,8 +1,17 @@
 /**
+ * Student type that represents each individual student on portal
+ * @typedef {Object} Student
+ * @property {String} id unique id to identify the student
+ * @property {String} name name of the student
+ * @property {Number} score score of the student
+ * @property {Number} avg Average score of the student
+ */
+
+/**
  * A generic function that gets all the student stats from the {WebElement} Page passed as reference
  * @param {import('puppeteer').Page} page The browser page object on which we can get the details of
  *  particular question
- * @returns {Object[]} Array of student details
+ * @returns {Student[]} Array of student details
  */
 async function getStatsFromPage(page) {
 
@@ -46,7 +55,7 @@ async function getStatsFromPage(page) {
  * of pagination of the stats page. The DOM nodes need to be passed to
  * get the details of the student
  * @param {import('puppeteer').ElementHandle[]} studentsDOMNodes Student DOM nodes on current page
- * @returns {Object[]} student objects containing the details of student
+ * @returns {Student[]} student objects containing the details of student
  */
 async function getStudentsInEachPage(studentsDOMNodes, page) {
     let students = [];
