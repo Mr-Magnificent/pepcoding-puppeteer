@@ -12,7 +12,7 @@ require('dotenv').config({
 /**
  * Fetches the enrolled students within the course passed as the url
  * @param {String} url The URL of the course from where to fetch the student details
- * @returns {import('./getStatsFromPage').Student[]}  Student list for that particular course
+ * @returns {Promise.<import('./getStatsFromPage').Student[]>}  Student list for that particular course
  */
 async function fetchStudentList(url) {
     try {
@@ -32,7 +32,6 @@ async function fetchStudentList(url) {
 
         const browser = await puppeteer.launch({
             headless: false,
-            slowMo: 10,
             defaultViewport: null
         });
 
@@ -44,7 +43,7 @@ async function fetchStudentList(url) {
         const page = pages[0];
 
         await page.goto(process.env.LOGIN_URL, {
-            waitUntil: 'networkidle0'
+            waitUntil: 'networkidle2'
         });
 
         // * logging into pepcoding using the email and password
@@ -77,5 +76,11 @@ async function fetchStudentList(url) {
         throw err;
     }
 }
+
+// fetchStudentList('https://www.pepcoding.com/resources/online-java-foundation')
+//     .then((data) => console.log(data))
+//     .catch((err) => {
+//         console.log(err);
+//     });
 
 exports.fetchStudentList = fetchStudentList;

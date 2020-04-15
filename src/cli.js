@@ -7,7 +7,8 @@ const path = require('path');
 const fuzzy = require('fuzzy');
 
 const loadStudents = require('./loadEnrolled');
-const { getStatsFromPage } = require('./getStatsFromPage')
+const questionStats = require('./questionStats');
+const matchStudentsWithStats = require('./matchStudents');
 
 const pipeline = util.promisify(stream.pipeline);
 
@@ -38,23 +39,29 @@ function parseArgumentsIntoOptions(rawArgs) {
         }
     );
 
+    console.clear();
+
     return {
         skipPrompts: args['--yes'] || false,
         git: args['--git'] || false,
         runInstall: args['--install'] || false,
         questions: args['--questions'] || [],
-        filePath: args['--file-path'] || '../.pepconfig.json',
+        filePath: args['--file-path'] || './.pepconfig.json',
     };
 }
 
 async function promptForMissingOptions(options) {
     const questions = [];
     try {
+        /**
+         * @file used to store the configuration for the cli
+         */
         let fileContent = JSON.parse(await fs.promises.readFile(path.resolve(options.filePath)));
         await updatePepConfig(fileContent, options.filePath);
         fileContent = JSON.parse(await fs.promises.readFile(path.resolve(options.filePath)));
-        await getStatsFromPage(fileContent.questions);
-
+        const studentPerQuestion = await questionStats(fileContent.questionsUrl);
+        
+        await matchStudentsWithStats(studentPerQuestion, fileContent);
     } catch (err) {
         if (err.code === 'ENOENT') {
             try {
@@ -95,11 +102,19 @@ async function updatePepConfig(fileContent, path) {
 
         fileContent['email'] = email;
 
-        let studentsEnrolled = [];
+        // let studentsEnrolled = [];
 
+        const studentsEnrolledObj = {};
         for (let url of fileContent.courseUrls) {
             const students = await loadStudents.fetchStudentList(url);
-            studentsEnrolled = [...studentsEnrolled, ...students];
+            for (let student of students) {
+                studentsEnrolledObj[student.id] = student;
+            }
+        }
+
+        const studentsEnrolled = [];
+        for(let student in studentsEnrolledObj) {
+            studentsEnrolled.push(studentsEnrolledObj[student]);
         }
 
         const { selectStudents } = await inquirer.prompt({
@@ -115,7 +130,7 @@ async function updatePepConfig(fileContent, path) {
             studentsSelected = await fetchSelectedStudents(studentsEnrolled);
 
         fileContent['studentsEnrolled'] = studentsEnrolled;
-        fileContent['studentToCheck'] = studentsSelected || studentsEnrolled;
+        fileContent['studentToCheck'] = studentsSelected || studentsEnrolledObj;
 
         await fs.promises.writeFile(path, JSON.stringify(fileContent));
     } catch (err) {
@@ -125,7 +140,6 @@ async function updatePepConfig(fileContent, path) {
 }
 
 async function createNewFile(filePath) {
-    const courseDetails = {};
     let questions = [];
 
     questions.push({
@@ -135,9 +149,9 @@ async function createNewFile(filePath) {
         default: true,
     });
 
-    const { createNewFile } = await inquirer.prompt(questions);
+    const { createNewFile: createNewConfig } = await inquirer.prompt(questions);
 
-    if (createNewFile === true) {
+    if (createNewConfig === true) {
         questions = [];
 
         // ask for email
@@ -196,6 +210,15 @@ async function createNewFile(filePath) {
         } else {
             selectedStudents = await fetchSelectedStudents(studentsEnrolled);
         }
+
+        const fileContent = {};
+        fileContent.email = answers['email'];
+        fileContent['courseUrls'] = answers['course'];
+        fileContent['questionsUrl'] = [];
+        fileContent['studentToCheck'] = selectedStudents;
+        fileContent['studentsEnrolled'] = studentsEnrolled;
+
+        await fs.promises.writeFile(filePath, JSON.stringify(fileContent));
     }
 }
 

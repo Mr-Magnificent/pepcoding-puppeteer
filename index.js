@@ -1,3 +1,4 @@
-const puppeteer = require('puppeteer');
+require('dotenv').config();
 
-~function getStudent
+require = require('esm')(module);
+require('./src/cli').cli(process.argv);

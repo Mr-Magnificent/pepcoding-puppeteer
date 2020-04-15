@@ -27,7 +27,6 @@ async function getQuestionDetails(questionUrls) {
 
         const browser = await puppeteer.launch({
             headless: false,
-            slowMo: 10,
             defaultViewport: null
         });
 
@@ -36,7 +35,7 @@ async function getQuestionDetails(questionUrls) {
         const loginPage = overallPages[0];
 
         await loginPage.goto(process.env.LOGIN_URL, {
-            waitUntil: 'networkidle0'
+            waitUntil: 'networkidle2'
         });
 
         process.env.PEP_MAIL = 'ayush.zombiestar@gmail.com';
@@ -61,7 +60,8 @@ async function getQuestionDetails(questionUrls) {
 
         const submissionsPerQuestions = await Promise.all(pages);
 
-        console.log(submissionsPerQuestions);
+        await browser.close();
+        return submissionsPerQuestions;
 
     } catch (err) {
         console.log(err.stack);
