@@ -27,6 +27,9 @@ instructors manage multiple batches and a individual **pepconfig.json** can be m
 
 * Sorting of the students based on `not submission` or `partial submission` is also possible though not implimented yet.
 
+* Can be used by anyone enrolled in the course, this includes TA's. So they can see and target themselves, reducing load on
+Instructor. 
+
 # Run #
 ```
 $ git clone https://github.com/Mr-Magnificent/pepcoding-puppeteer.git
