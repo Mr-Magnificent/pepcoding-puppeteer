@@ -1,4 +1,4 @@
-const Table = require('cli-table');
+const Table = require('cli-table3');
 const chalk = require('chalk');
 
 /**
@@ -40,17 +40,21 @@ async function matchStudents(allQuestionSubmission, fileContent) {
     }
 
     // console.log(stats);
+    displayQuestionStats(fileContent, stats);
     displayTableToCLI(fileContent, stats);
 }
 
 /**
- * 
+ * Function responsible for showing the result of the students to the console
  * @param {Object} fileContent content of .pepconfig.json
  * @param {stats} stats stats of the students
  */
 function displayTableToCLI(fileContent, stats) {
     let quesIdx = fileContent.questionsUrl.map((val, idx) => idx);
     quesIdx = ['name', ...quesIdx];
+
+    printLegend();
+
     const table = new Table({
         colors: true,
         head: quesIdx
@@ -75,7 +79,49 @@ function displayTableToCLI(fileContent, stats) {
         table.push(studentStats);
     }
 
+    console.log(table.toString());
+}
+
+function printLegend() {
+    const table = new Table();
+
+    table.push(
+        {"ok": "All Submitted"},
+        {"no": "no submissions"},
+        {"pa": "partially accepted"}
+    );
+
+    console.log(table.toString());
+}
+
+function displayQuestionStats(fileContent, stats) {
+    const table = new Table({
+        colors: true,
+        head: [chalk.white("question"), chalk.yellow("pa"), chalk.red("no"), chalk.green("ok")]
+    });
+
+
+    const studentSize = fileContent['studentToCheck'].length;
+
+    stats.forEach((questionStat, idx) => {
+        const partialCount = questionStat['partial'].size;
+        const partialStat = `${partialCount} / ${studentSize}`;
+
+        const noneCount = questionStat['none'].size;
+        const noneStat = `${noneCount} / ${studentSize}`;
+
+
+        const acceptedStat = `${studentSize - (partialCount + noneCount)} / ${studentSize}`;
+        table.push([
+            fileContent['questionsUrl'][idx].match(/(\w)*$/)[0],
+            chalk.yellow(partialStat),
+            chalk.red(noneStat),
+            chalk.green(acceptedStat)
+        ]);
+    });
+
     console.clear();
+
     console.log(table.toString());
 }
 

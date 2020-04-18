@@ -60,7 +60,7 @@ async function promptForMissingOptions(options) {
         await updatePepConfig(fileContent, options.filePath);
         fileContent = JSON.parse(await fs.promises.readFile(path.resolve(options.filePath)));
         const studentPerQuestion = await questionStats(fileContent.questionsUrl);
-        
+
         await matchStudentsWithStats(studentPerQuestion, fileContent);
     } catch (err) {
         if (err.code === 'ENOENT') {
@@ -69,8 +69,9 @@ async function promptForMissingOptions(options) {
             } catch (err) {
                 console.error(err.stack);
             }
+        } else {
+            console.log(err.stack);
         }
-        console.log(err);
     }
 }
 
@@ -105,7 +106,9 @@ async function updatePepConfig(fileContent, path) {
         // let studentsEnrolled = [];
 
         const studentsEnrolledObj = {};
-        for (let url of fileContent.courseUrls) {
+        // const urls = fileContent['courseUrls'];
+        // console.log(urls);
+        for (let url of fileContent['courseUrls']) {
             const students = await loadStudents.fetchStudentList(url);
             for (let student of students) {
                 studentsEnrolledObj[student.id] = student;
@@ -113,7 +116,7 @@ async function updatePepConfig(fileContent, path) {
         }
 
         const studentsEnrolled = [];
-        for(let student in studentsEnrolledObj) {
+        for (let student in studentsEnrolledObj) {
             studentsEnrolled.push(studentsEnrolledObj[student]);
         }
 
@@ -213,7 +216,7 @@ async function createNewFile(filePath) {
 
         const fileContent = {};
         fileContent.email = answers['email'];
-        fileContent['courseUrls'] = answers['course'];
+        fileContent['courseUrls'] = [answers['course']];
         fileContent['questionsUrl'] = [];
         fileContent['studentToCheck'] = selectedStudents;
         fileContent['studentsEnrolled'] = studentsEnrolled;
