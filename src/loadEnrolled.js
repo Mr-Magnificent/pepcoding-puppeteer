@@ -36,7 +36,6 @@ async function fetchStudentList(url) {
         });
 
         process.env.PEP_PASS = inqAns.password;
-        process.env.PEP_MAIL = 'ayush.zombiestar@gmail.com';
 
         const pages = await browser.pages();
 

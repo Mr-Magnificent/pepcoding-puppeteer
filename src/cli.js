@@ -8,7 +8,7 @@ const fuzzy = require('fuzzy');
 
 const loadStudents = require('./loadEnrolled');
 const questionStats = require('./questionStats');
-const matchStudentsWithStats = require('./matchStudents');
+const { matchStudents, displayTablesToCLI } = require('./matchStudents');
 
 const pipeline = util.promisify(stream.pipeline);
 
@@ -23,6 +23,7 @@ function parseArgumentsIntoOptions(rawArgs) {
             '--create-config': Boolean,
             '--file-path': String,
             '--course': [String],
+            '--attendance-url': String,
 
             // * Aliases
             '-q': '--questions',
@@ -32,6 +33,7 @@ function parseArgumentsIntoOptions(rawArgs) {
             '-c': '--course',
             '-h': '--help',
             '-f': '--file-path',
+            '-au': '--attendance-url'
         },
         {
             argv: rawArgs.slice(2),
@@ -47,6 +49,7 @@ function parseArgumentsIntoOptions(rawArgs) {
         runInstall: args['--install'] || false,
         questions: args['--questions'] || [],
         filePath: args['--file-path'] || './.pepconfig.json',
+        attendanceUrl: args['--attendance-url'] || undefined,
     };
 }
 
@@ -59,9 +62,14 @@ async function promptForMissingOptions(options) {
         let fileContent = JSON.parse(await fs.promises.readFile(path.resolve(options.filePath)));
         await updatePepConfig(fileContent, options.filePath);
         fileContent = JSON.parse(await fs.promises.readFile(path.resolve(options.filePath)));
+        
+        process.env.PEP_MAIL = fileContent.email;
+
         const studentPerQuestion = await questionStats(fileContent.questionsUrl);
 
-        await matchStudentsWithStats(studentPerQuestion, fileContent);
+        const stats = await matchStudents(studentPerQuestion, fileContent);
+        displayTablesToCLI(fileContent, stats);
+
     } catch (err) {
         if (err.code === 'ENOENT') {
             try {

@@ -1,391 +1,467 @@
 {
     "email": "ayush.zombiestar@gmail.com",
-    "courseUrls": "https://www.pepcoding.com/resources/the-placement-program",
-    "questionsUrl": [
-        "https://www.pepcoding.com/resources/the-placement-program/recursion/print-maze-path-with-jumps-official/ojquestion",
-        "https://www.pepcoding.com/resources/the-placement-program/recursion/print-maze-paths-official/ojquestion",
-        "https://www.pepcoding.com/resources/the-placement-program/patterns/design-pattern-9-official/ojquestion"
-    ],
+    "courseUrls": ["https://www.pepcoding.com/resources/the-placement-program/stacks-and-queues/"],
+    "questionsUrl": [],
     "studentToCheck": [{
-        "id": "stat660",
-        "name": "Ayush",
-        "score": 1020,
-        "avg": 10
-    }, {
-        "id": "stat3052",
-        "name": "Harshit Bhardwaj",
-        "score": 1370,
-        "avg": 10
-    }, {
-        "id": "stat2777",
-        "name": "Sush7597",
-        "score": 1370,
-        "avg": 10
-    }, {
-        "id": "stat3103",
-        "name": "Harsh Sharma",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat1701",
-        "name": "Anubhav Bose",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat2770",
-        "name": "Ayush Bansal",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat2039",
-        "name": "Pooja",
-        "score": 1360,
-        "avg": 10
-    }],
-    "studentsEnrolled": [{
-        "id": "stat3052",
-        "name": "Harshit Bhardwaj",
-        "score": 1370,
-        "avg": 10
-    }, {
-        "id": "stat2778",
-        "name": "Akshat Jain",
-        "score": 1370,
-        "avg": 10
-    }, {
         "id": "stat2773",
         "name": "ashir kulshrestha",
-        "score": 1370,
-        "avg": 10
-    }, {
-        "id": "stat2777",
-        "name": "Sush7597",
-        "score": 1370,
-        "avg": 10
-    }, {
-        "id": "stat1160",
-        "name": "Anand Kumar",
-        "score": 1370,
-        "avg": 10
-    }, {
-        "id": "stat2569",
-        "name": "Ankit",
-        "score": 1370,
-        "avg": 10
-    }, {
-        "id": "stat3103",
-        "name": "Harsh Sharma",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat2772",
-        "name": "Aayushi Choudhary",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat1701",
-        "name": "Anubhav Bose",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat2770",
-        "name": "Ayush Bansal",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat2039",
-        "name": "Pooja",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat2767",
-        "name": "Shardul Negi",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat2761",
-        "name": "Aakash Mittal",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat2881",
-        "name": "Vineet",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat2769",
-        "name": "Ananya Bansal",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat2044",
-        "name": "Harshit Tilak",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat2378",
-        "name": "SHASHANK SHARDA",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat2768",
-        "name": "Jhalak",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat2762",
-        "name": "Rishabh Mall",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat1302",
-        "name": "Arvind Baloda",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat2771",
-        "name": "Harsh Luthra",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat2766",
-        "name": "Sparsh Chowdhary",
-        "score": 1360,
-        "avg": 10
-    }, {
-        "id": "stat3021",
-        "name": "monika singh",
-        "score": 1360,
+        "score": 50,
         "avg": 10
     }, {
         "id": "stat2764",
         "name": "Bhavesh Kumar",
-        "score": 1360,
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat3021",
+        "name": "monika singh",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2766",
+        "name": "Sparsh Chowdhary",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2767",
+        "name": "Shardul Negi",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat3103",
+        "name": "Harsh Sharma",
+        "score": 50,
         "avg": 10
     }, {
         "id": "stat2453",
         "name": "Sakshi Aggarwal",
-        "score": 1360,
+        "score": 50,
         "avg": 10
     }, {
-        "id": "stat2763",
-        "name": "Tanisha Jain",
-        "score": 1360,
+        "id": "stat2378",
+        "name": "SHASHANK SHARDA",
+        "score": 50,
         "avg": 10
     }, {
-        "id": "stat2094",
-        "name": "Shivam Arora",
-        "score": 1360,
+        "id": "stat1160",
+        "name": "Anand Kumar",
+        "score": 50,
         "avg": 10
     }, {
-        "id": "stat2406",
-        "name": "Ashwani Prasad",
-        "score": 1358,
-        "avg": 9.99
+        "id": "stat2778",
+        "name": "Akshat Jain",
+        "score": 50,
+        "avg": 10
     }, {
-        "id": "stat3225",
-        "name": "Saranpreet Singh",
-        "score": 1358,
-        "avg": 9.99
-    }, {
-        "id": "stat2623",
-        "name": "Akshit Singh",
-        "score": 1354,
-        "avg": 9.96
+        "id": "stat2771",
+        "name": "Harsh Luthra",
+        "score": 50,
+        "avg": 10
     }, {
         "id": "stat1158",
         "name": "Gita Rani",
-        "score": 1348,
-        "avg": 9.99
-    }, {
-        "id": "stat1523",
-        "name": "Siddharth Sahoo",
-        "score": 1348,
-        "avg": 9.99
-    }, {
-        "id": "stat2871",
-        "name": "Zeeshan Ali",
-        "score": 1344,
-        "avg": 9.96
-    }, {
-        "id": "stat3230",
-        "name": "pradeep singh",
-        "score": 1340,
+        "score": 50,
         "avg": 10
     }, {
-        "id": "stat1858",
-        "name": "Aditya Kapoor",
-        "score": 1330,
+        "id": "stat2772",
+        "name": "Aayushi Choudhary",
+        "score": 50,
         "avg": 10
     }, {
-        "id": "stat975",
-        "name": "dev",
-        "score": 1324,
-        "avg": 9.88
-    }, {
-        "id": "stat1860",
-        "name": "sahil bhalla",
-        "score": 1320,
+        "id": "stat2881",
+        "name": "Vineet",
+        "score": 50,
         "avg": 10
     }, {
-        "id": "stat308",
-        "name": "munish",
-        "score": 1310,
+        "id": "stat2761",
+        "name": "Aakash Mittal",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2044",
+        "name": "Harshit Tilak",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat1701",
+        "name": "Anubhav Bose",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2762",
+        "name": "Rishabh Mall",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2769",
+        "name": "Ananya Bansal",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2770",
+        "name": "Ayush Bansal",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2777",
+        "name": "Sush7597",
+        "score": 50,
         "avg": 10
     }, {
         "id": "stat778",
         "name": "vinay chaurasia",
-        "score": 1270,
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2768",
+        "name": "Jhalak",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2039",
+        "name": "Pooja",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat308",
+        "name": "munish",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat3230",
+        "name": "pradeep singh",
+        "score": 48,
+        "avg": 9.6
+    }, {
+        "id": "stat2094",
+        "name": "Shivam Arora",
+        "score": 42,
+        "avg": 8.4
+    }, {
+        "id": "stat2763",
+        "name": "Tanisha Jain",
+        "score": 42,
+        "avg": 8.4
+    }, {
+        "id": "stat2406",
+        "name": "Ashwani Prasad",
+        "score": 42,
+        "avg": 8.4
+    }, {
+        "id": "stat2705",
+        "name": "kamal choudhary",
+        "score": 40,
+        "avg": 10
+    }, {
+        "id": "stat2623",
+        "name": "Akshit Singh",
+        "score": 40,
+        "avg": 10
+    }, {
+        "id": "stat1302",
+        "name": "Arvind Baloda",
+        "score": 40,
         "avg": 10
     }, {
         "id": "stat1137",
         "name": "Prachi",
-        "score": 1260,
+        "score": 40,
         "avg": 10
     }, {
-        "id": "stat1144",
-        "name": "JITENDER CHAUHAN",
-        "score": 1220,
+        "id": "stat3052",
+        "name": "Harshit Bhardwaj",
+        "score": 40,
         "avg": 10
     }, {
-        "id": "stat2989",
-        "name": "Vakul Garg",
-        "score": 1142,
-        "avg": 9.93
-    }, {
-        "id": "stat1187",
-        "name": "vinay kumar",
-        "score": 1136,
-        "avg": 9.79
-    }, {
-        "id": "stat2765",
-        "name": "Shekhar Bhardwaj",
-        "score": 1130,
-        "avg": 10
-    }, {
-        "id": "stat1887",
-        "name": "bhavesh bansal",
-        "score": 1110,
-        "avg": 10
-    }, {
-        "id": "stat1500",
-        "name": "Rama Brahmam Botla",
-        "score": 1040,
+        "id": "stat3225",
+        "name": "Saranpreet Singh",
+        "score": 40,
         "avg": 10
     }, {
         "id": "stat660",
         "name": "Ayush",
-        "score": 1020,
-        "avg": 10
+        "score": 32,
+        "avg": 8
     }, {
-        "id": "stat800",
-        "name": "Mohit Behl",
-        "score": 965,
-        "avg": 9.85
-    }, {
-        "id": "stat3288",
-        "name": "JASBIR SINGH",
-        "score": 950,
-        "avg": 10
-    }, {
-        "id": "stat2705",
-        "name": "kamal choudhary",
-        "score": 840,
-        "avg": 10
-    }, {
-        "id": "stat2865",
-        "name": "Sai Chaithanya",
-        "score": 765,
-        "avg": 9.94
-    }, {
-        "id": "stat330",
-        "name": "Vasu Singal",
-        "score": 570,
-        "avg": 10
-    }, {
-        "id": "stat334",
-        "name": "Tushar Gupta",
-        "score": 508,
-        "avg": 9.77
-    }, {
-        "id": "stat2943",
-        "name": "Nandika",
-        "score": 340,
-        "avg": 10
-    }, {
-        "id": "stat799",
-        "name": "Kartik rai",
-        "score": 330,
-        "avg": 10
-    }, {
-        "id": "stat726",
-        "name": "Sushant Beriwal",
-        "score": 290,
-        "avg": 10
-    }, {
-        "id": "stat158",
-        "name": "kchaudhary",
-        "score": 170,
-        "avg": 10
-    }, {
-        "id": "stat102",
-        "name": "Deepanshu",
-        "score": 160,
-        "avg": 10
-    }, {
-        "id": "stat620",
-        "name": "SUNNY SINGH",
-        "score": 160,
-        "avg": 10
-    }, {
-        "id": "stat847",
-        "name": "Shivani singhal",
-        "score": 140,
-        "avg": 10
-    }, {
-        "id": "stat729",
-        "name": "Munish Grover",
-        "score": 108,
-        "avg": 9.82
-    }, {
-        "id": "stat2941",
-        "name": "Garima Sharma",
-        "score": 80,
-        "avg": 10
-    }, {
-        "id": "stat593",
-        "name": "Vasu Goel",
-        "score": 78,
-        "avg": 8.67
-    }, {
-        "id": "stat3247",
-        "name": "Tanu Malik",
-        "score": 66,
-        "avg": 9.43
-    }, {
-        "id": "stat2939",
-        "name": "saurab",
-        "score": 60,
-        "avg": 10
-    }, {
-        "id": "stat173",
-        "name": "akash garg",
-        "score": 50,
-        "avg": 10
-    }, {
-        "id": "stat1147",
-        "name": "Lokesh kumar",
+        "id": "stat1523",
+        "name": "Siddharth Sahoo",
         "score": 30,
         "avg": 10
     }, {
-        "id": "stat465",
-        "name": "Abhishek Verma",
+        "id": "stat1860",
+        "name": "sahil bhalla",
+        "score": 30,
+        "avg": 10
+    }, {
+        "id": "stat1144",
+        "name": "JITENDER CHAUHAN",
+        "score": 30,
+        "avg": 10
+    }, {
+        "id": "stat1500",
+        "name": "Rama Brahmam Botla",
+        "score": 30,
+        "avg": 10
+    }, {
+        "id": "stat1187",
+        "name": "vinay kumar",
+        "score": 24,
+        "avg": 8
+    }, {
+        "id": "stat1858",
+        "name": "Aditya Kapoor",
+        "score": 20,
+        "avg": 10
+    }, {
+        "id": "stat975",
+        "name": "dev",
+        "score": 20,
+        "avg": 10
+    }, {
+        "id": "stat330",
+        "name": "Vasu Singal",
         "score": 10,
         "avg": 10
     }, {
-        "id": "stat2102",
-        "name": "Jasbir Singh",
+        "id": "stat2569",
+        "name": "Ankit",
+        "score": 10,
+        "avg": 5
+    }, {
+        "id": "stat2871",
+        "name": "Zeeshan Ali",
+        "score": 2,
+        "avg": 2
+    }],
+    "studentsEnrolled": [{
+        "id": "stat2773",
+        "name": "ashir kulshrestha",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2764",
+        "name": "Bhavesh Kumar",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat3021",
+        "name": "monika singh",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2766",
+        "name": "Sparsh Chowdhary",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2767",
+        "name": "Shardul Negi",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat3103",
+        "name": "Harsh Sharma",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2453",
+        "name": "Sakshi Aggarwal",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2378",
+        "name": "SHASHANK SHARDA",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat1160",
+        "name": "Anand Kumar",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2778",
+        "name": "Akshat Jain",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2771",
+        "name": "Harsh Luthra",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat1158",
+        "name": "Gita Rani",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2772",
+        "name": "Aayushi Choudhary",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2881",
+        "name": "Vineet",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2761",
+        "name": "Aakash Mittal",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2044",
+        "name": "Harshit Tilak",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat1701",
+        "name": "Anubhav Bose",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2762",
+        "name": "Rishabh Mall",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2769",
+        "name": "Ananya Bansal",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2770",
+        "name": "Ayush Bansal",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2777",
+        "name": "Sush7597",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat778",
+        "name": "vinay chaurasia",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2768",
+        "name": "Jhalak",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat2039",
+        "name": "Pooja",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat308",
+        "name": "munish",
+        "score": 50,
+        "avg": 10
+    }, {
+        "id": "stat3230",
+        "name": "pradeep singh",
+        "score": 48,
+        "avg": 9.6
+    }, {
+        "id": "stat2094",
+        "name": "Shivam Arora",
+        "score": 42,
+        "avg": 8.4
+    }, {
+        "id": "stat2763",
+        "name": "Tanisha Jain",
+        "score": 42,
+        "avg": 8.4
+    }, {
+        "id": "stat2406",
+        "name": "Ashwani Prasad",
+        "score": 42,
+        "avg": 8.4
+    }, {
+        "id": "stat2705",
+        "name": "kamal choudhary",
+        "score": 40,
+        "avg": 10
+    }, {
+        "id": "stat2623",
+        "name": "Akshit Singh",
+        "score": 40,
+        "avg": 10
+    }, {
+        "id": "stat1302",
+        "name": "Arvind Baloda",
+        "score": 40,
+        "avg": 10
+    }, {
+        "id": "stat1137",
+        "name": "Prachi",
+        "score": 40,
+        "avg": 10
+    }, {
+        "id": "stat3052",
+        "name": "Harshit Bhardwaj",
+        "score": 40,
+        "avg": 10
+    }, {
+        "id": "stat3225",
+        "name": "Saranpreet Singh",
+        "score": 40,
+        "avg": 10
+    }, {
+        "id": "stat660",
+        "name": "Ayush",
+        "score": 32,
+        "avg": 8
+    }, {
+        "id": "stat1523",
+        "name": "Siddharth Sahoo",
+        "score": 30,
+        "avg": 10
+    }, {
+        "id": "stat1860",
+        "name": "sahil bhalla",
+        "score": 30,
+        "avg": 10
+    }, {
+        "id": "stat1144",
+        "name": "JITENDER CHAUHAN",
+        "score": 30,
+        "avg": 10
+    }, {
+        "id": "stat1500",
+        "name": "Rama Brahmam Botla",
+        "score": 30,
+        "avg": 10
+    }, {
+        "id": "stat1187",
+        "name": "vinay kumar",
+        "score": 24,
+        "avg": 8
+    }, {
+        "id": "stat1858",
+        "name": "Aditya Kapoor",
+        "score": 20,
+        "avg": 10
+    }, {
+        "id": "stat975",
+        "name": "dev",
+        "score": 20,
+        "avg": 10
+    }, {
+        "id": "stat330",
+        "name": "Vasu Singal",
         "score": 10,
         "avg": 10
+    }, {
+        "id": "stat2569",
+        "name": "Ankit",
+        "score": 10,
+        "avg": 5
+    }, {
+        "id": "stat2871",
+        "name": "Zeeshan Ali",
+        "score": 2,
+        "avg": 2
     }]
 }

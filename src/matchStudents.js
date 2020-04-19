@@ -6,7 +6,7 @@ const chalk = require('chalk');
  * within the by comparing it with studentsEnrolled in fileContent
  * @param {import('./getStatsFromPage').Student[][]} allQuestionSubmission student submission per question
  * @param {Object} fileContent File contents of --file-path
- * @returns {Promise.<undefined>}
+ * @returns {Promise.<stat[]>}
  */
 async function matchStudents(allQuestionSubmission, fileContent) {
     const enrolledStudentsMap = new Map();
@@ -39,9 +39,12 @@ async function matchStudents(allQuestionSubmission, fileContent) {
         stats.push({ partial: studentsPartialSubmissionSet, none: noSubmissionsSet });
     }
 
-    // console.log(stats);
+    return stats;
+}
+
+function displayTablesToCLI(fileContent, stats) {
     displayQuestionStats(fileContent, stats);
-    displayTableToCLI(fileContent, stats);
+    displayStudentsStats(fileContent, stats);
 }
 
 /**
@@ -49,7 +52,7 @@ async function matchStudents(allQuestionSubmission, fileContent) {
  * @param {Object} fileContent content of .pepconfig.json
  * @param {stats} stats stats of the students
  */
-function displayTableToCLI(fileContent, stats) {
+function displayStudentsStats(fileContent, stats) {
     let quesIdx = fileContent.questionsUrl.map((val, idx) => idx);
     quesIdx = ['name', ...quesIdx];
 
@@ -125,7 +128,8 @@ function displayQuestionStats(fileContent, stats) {
     console.log(table.toString());
 }
 
-module.exports = matchStudents;
+exports.matchStudents = matchStudents;
+exports.displayTablesToCLI = displayTablesToCLI;
 
 /**
  * @typedef stat
