@@ -133,7 +133,7 @@ async function updatePepConfig(fileContent, path) {
             studentsSelected = await fetchSelectedStudents(studentsEnrolled);
 
         fileContent['studentsEnrolled'] = studentsEnrolled;
-        fileContent['studentToCheck'] = studentsSelected || studentsEnrolledObj;
+        fileContent['studentToCheck'] = studentsSelected || studentsEnrolled;
 
         await fs.promises.writeFile(path, JSON.stringify(fileContent));
     } catch (err) {

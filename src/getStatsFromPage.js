@@ -27,7 +27,7 @@ async function getStatsFromPage(page) {
     await page.waitForResponse((res) => {
         return /https:\/\/www.pepcoding.com\/stats\/.*/.test(res.url());
     }, {
-        timeout: 30000
+        timeout: 0
     });
 
     // * fetch all the students names and details

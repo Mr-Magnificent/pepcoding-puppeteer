@@ -64,6 +64,7 @@ function displayTableToCLI(fileContent, stats) {
      * @type {import('./getStatsFromPage').Student[]}
      */
     const studentsToDisplay = fileContent['studentToCheck'];
+    // console.log(studentsToDisplay);
     for(let student of studentsToDisplay) {
         let studentStats = [];
         studentStats.push(student.name);
