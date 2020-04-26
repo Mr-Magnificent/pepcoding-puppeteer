@@ -114,7 +114,7 @@ function displayQuestionStats(fileContent, stats) {
 
         const acceptedStat = `${studentSize - (partialCount + noneCount)} / ${studentSize}`;
         table.push([
-            fileContent['questionsUrl'][idx].match(/(\w)*$/)[0],
+            fileContent['questionsUrl'][idx].match(/((-?\w)*(\/?)){2}$/)[0].split('/')[0],
             chalk.yellow(partialStat),
             chalk.red(noneStat),
             chalk.green(acceptedStat)
