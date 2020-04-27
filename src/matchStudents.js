@@ -50,7 +50,7 @@ async function matchStudents(allQuestionSubmission, fileContent) {
  * @param {stats} stats stats of the students
  */
 function displayTableToCLI(fileContent, stats) {
-    let quesIdx = fileContent.questionsUrl.map((val, idx) => idx);
+    let quesIdx = fileContent.questionsUrl.map((val, idx) => chalk.white(idx));
     quesIdx = ['name', ...quesIdx];
 
     printLegend();
@@ -98,7 +98,7 @@ function printLegend() {
 function displayQuestionStats(fileContent, stats) {
     const table = new Table({
         colors: true,
-        head: [chalk.white("question"), chalk.yellow("pa"), chalk.red("no"), chalk.green("ok")]
+        head: [chalk.white("id"), chalk.white("question"), chalk.yellow("pa"), chalk.red("no"), chalk.green("ok")]
     });
 
 
@@ -114,6 +114,7 @@ function displayQuestionStats(fileContent, stats) {
 
         const acceptedStat = `${studentSize - (partialCount + noneCount)} / ${studentSize}`;
         table.push([
+            chalk.white(idx),
             fileContent['questionsUrl'][idx].match(/((-?\w)*(\/?)){2}$/)[0].split('/')[0],
             chalk.yellow(partialStat),
             chalk.red(noneStat),
