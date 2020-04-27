@@ -82,7 +82,7 @@ async function login() {
 
 attendance({
     filePath: '../.pepconfig.json',
-    attendanceUrl: 'https://www.pepcoding.com/resources/the-placement-program/stacks-and-queues/duplicate-brackets-official/ojquestion'
+    attendanceUrl: process.argv[2] 
 })
 
 async function markAttendance(fileContent, students) {
